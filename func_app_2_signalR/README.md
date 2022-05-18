@@ -1,8 +1,9 @@
-# SignalR を利用してみる
+# FunctionsでSignalRを利用してみる
 
 https://docs.microsoft.com/ja-jp/azure/azure-signalr/signalr-overview
 
 リアルタイムのWEB機能
+PubSubとほぼ同じ機能
 
 ## 用途
 サーバーからクライアントにリアルタイムでデータをプッシュすることができる
