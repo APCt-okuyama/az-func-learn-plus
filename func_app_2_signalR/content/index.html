@@ -1,0 +1,54 @@
+<html>
+
+<body>
+  <h1>Azure SignalR Serverless Sample</h1>
+  messages: <div id="messages"></div>
+
+  <h1>Azure SignalR Serverless Sample2</h1>
+  messages2: <div id="messages2"></div>
+  <button id="mybtn" class="favorite styled" type="button">test</button>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.7/signalr.min.js"></script>
+  <script>
+    let messages = document.querySelector('#messages');
+    const apiBaseUrl = window.location.origin;
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl(apiBaseUrl + '/api')
+        .configureLogging(signalR.LogLevel.Information)
+        .build();
+      connection.on('newMessage', (message) => {
+        document.getElementById("messages").innerHTML = message;
+      });
+      connection.on('newMessage2', (message) => {
+        //message = 1652852845 (sec)
+        //1652853041703
+        //1652853041
+        let now = new Date();
+        console.log(now.getTime() + ":" + message );
+        document.getElementById("messages2").innerHTML = message;
+      });
+
+      connection.start()
+        .catch(console.error);
+
+      connection.onreconnected( connectionId => {
+        console.log('onreconnected start');
+      });
+
+    $('#mybtn').on('click', function() {
+      console.log('click start');
+      //connection.invoke('newMessage2', 'newMessage2', 'newMessage2')
+      connection.send('newMessage2', ['newMessage2', 'newMessage2'])      
+      .then( function (value){
+        console.log(value);
+      })
+      .catch( function (err){
+        console.log(err);
+      });
+    });
+
+  </script>
+</body>
+
+</html>
