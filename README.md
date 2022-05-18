@@ -32,6 +32,7 @@ func new
 # 関数のデプロイ
 func azure functionapp publish my-example-func
 func azure functionapp publish my-example-func --publish-local-settings -y
+
 # ログの確認
 func azure functionapp logstream my-example-func
 ```
