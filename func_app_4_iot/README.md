@@ -95,7 +95,7 @@ mosquitto_pub -d -q 1 \
 ※mqtt_client_jsフォルダ
 
 https://github.com/Azure/azure-iot-sdk-node/tree/main/device
-を参考に作成しています。
+を参考に作成しています。サンプル多数あります。
 
 デバイスの作成
 ```

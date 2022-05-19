@@ -44,4 +44,5 @@ func azure functionapp logstream my-example-func
 ## 1.Azure AD (組み込みの認証)
 ## 2.Azure SignalR
 ## 3.Azure PubSub
+## 4.Azure IoT Hub
 
