@@ -21,6 +21,11 @@ az functionapp create -g az-func-example-rg --consumption-plan-location japaneas
 az resource update --resource-type Microsoft.Web/sites -g az-func-example-rg -n my-example-func/config/web --set properties.functionAppScaleLimit=1
 ```
 
+(注意) 不要になったら削除する
+```
+az group delete --name az-func-example-rg -y
+```
+
 ## Functions Core tools
 良く利用するコマンド
 ```
