@@ -7,6 +7,9 @@ https://docs.microsoft.com/ja-jp/azure/app-service/configure-authentication-prov
 
 ※IDプロバイダーとして、Facebook, Github, Google, Twitterなどが利用可能。
 
+# 組み込みの認証(Azure AD)の流れ
+
+![AADxFunctions](./AzureADxFunctions.png) 
 
 # 認証/承認についての基礎
 

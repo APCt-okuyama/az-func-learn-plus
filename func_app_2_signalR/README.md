@@ -2,8 +2,7 @@
 
 https://docs.microsoft.com/ja-jp/azure/azure-signalr/signalr-overview
 
-リアルタイムのWEB機能
-PubSubとほぼ同じ機能
+ASP.NET SignalRとはリアルタイム Web 機能を追加するプロセスを簡略化する、開発者向けのライブラリ
 
 ## 用途
 サーバーからクライアントにリアルタイムでデータをプッシュすることができる

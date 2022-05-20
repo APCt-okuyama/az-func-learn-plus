@@ -1,4 +1,4 @@
-# FunctionsでPubSub を利用してみる
+# FunctionsでWeb PubSub を利用してみる
 
 https://docs.microsoft.com/ja-jp/azure/azure-web-pubsub/quickstart-serverless?tabs=javascript
 
@@ -27,7 +27,7 @@ Iotデバイス
 SignalRはASP.NETを利用する場合は.NET エコシステム (Blazor など) と統合できる。Blazorとは.NETでクライアント側 Web UI (SPA) を構築するためのフレームワーク。
 PubSubはの方は汎用的なWebSocketサービスとなり、SignalRライブラリが不要なためクライアントを選ばない。
 
-## PubSub インスタンス作成
+## Web PubSub インスタンス作成
 ```
 az webpubsub create --name "az-func-pubsub-example" --resource-group "az-func-example-rg" --location "japaneast" --sku Free_F1
 az webpubsub key show --name az-func-pubsub-example --resource-group az-func-example-rg

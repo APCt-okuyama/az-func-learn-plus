@@ -91,6 +91,11 @@ mosquitto_pub -d -q 1 \
 
 `-t`でtopicを指定するが `"devices/{DeviceId}/messages/events/` の形式とする
 
+(補足) mosquittoはDockerを利用しました。
+```
+$ docker run -it --rm eclipse-mosquitto sh
+```
+
 ### 動作確認(javascriptのサンプルアプリ)
 ※mqtt_client_jsフォルダ
 
