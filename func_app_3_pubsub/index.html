@@ -24,6 +24,7 @@
                     });
                     let url = await res.json();
                     // connect
+                    console.log('url:' + JSON.stringify(url));
                     let ws = new WebSocket(url.url);
                     ws.onopen = () => console.log('connected');
                     ws.onmessage = event => {
