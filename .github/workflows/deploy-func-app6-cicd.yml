@@ -1,7 +1,9 @@
 name: Deploy Node.js project to function app
 
 on:
-  [push]
+  -push
+    branches:
+      - main
 
 env:
   AZURE_FUNCTIONAPP_NAME: my-example-func    # set this to your application's name
