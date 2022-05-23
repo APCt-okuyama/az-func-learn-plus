@@ -18,4 +18,7 @@ CI/CDツールにはJenkins,CircleCI,AzureDevOps, GitHubActionなど様々なツ
 
 ![Functions+CICD](./Functions-CICD.png) 
 
+## GitHub Actionの利用
+
+https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-how-to-github-actions?tabs=dotnet
 
