@@ -17,6 +17,7 @@ Azure Functionsは他のAzureサービスと簡単に連携できる仕組みが
 | 3_pubsub | Azure PubSub | 双方向通信 Websocket通信|
 | 4_iot | Azure IoT Hub | IoT向けサービス MQTT |
 | 5_keyvault | Key Vault | パスワードなどの秘匿情報の取り扱い |
+| 6_cicd | CI/CD | CI/CDについて<br>GitHub Actionの簡単なサンプル |
 
 ## Azure functions リソース準備
 Resource Group, Storage,  FunctionsApp
