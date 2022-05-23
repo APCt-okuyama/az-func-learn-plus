@@ -1,6 +1,8 @@
 # az-func-learn-plus
 
-Functionsと連携して便利に利用できそうなAzureサービスを確認する
+Azure Functionsは他のAzureサービスと簡単に連携できる仕組みが提供されており、様々なサービスを連携させ簡単に高度なシステムが構築できるように準備されています。
+
+![Functions+Others](./AzureFunctions.png) 
 
 ## Azure functions リソース準備
 Resource Group, Storage,  FunctionsApp
@@ -19,11 +21,6 @@ az functionapp create -g az-func-example-rg --consumption-plan-location japaneas
 ※従量課金プランで作成しているので開発中は不用意にスケーリングされないようにScaleLimitを設定しておきます。
 ```
 az resource update --resource-type Microsoft.Web/sites -g az-func-example-rg -n my-example-func/config/web --set properties.functionAppScaleLimit=1
-```
-
-(注意) 不要になったら削除する
-```
-az group delete --name az-func-example-rg -y
 ```
 
 ## Functions Core tools
@@ -46,3 +43,7 @@ func azure functionapp logstream my-example-func
 ## 3.Azure PubSub
 ## 4.Azure IoT Hub
 
+# (注意) 不要になったら削除する
+```
+az group delete --name az-func-example-rg -y
+```
