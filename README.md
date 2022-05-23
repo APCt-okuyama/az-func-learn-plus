@@ -4,6 +4,18 @@ Azure Functionsは他のAzureサービスと簡単に連携できる仕組みが
 
 ![Functions+Others](./AzureFunctions.png) 
 
+このリポジトリではFunctionsとAzureのその他のサービスの連携を確認します。
+
+## 連携するAzureサービス(機能)
+
+| フォルダ名 | Azure Service名 | 機能の概要 |
+| --- | --- | --- |
+| 1_auth | Azure AD | 組み込みの認証 |
+| 2_signalR | Azure SignalR | 双方向通信 |
+| 3_pubsub | Azure PubSub | 双方向通信 Websocket通信|
+| 4_iot | Azure IoT Hub | IoT向けサービス MQTT |
+| 5_keyvault | Key Vault | パスワードなどの秘匿情報の取り扱い |
+
 ## Azure functions リソース準備
 Resource Group, Storage,  FunctionsApp
 ```
@@ -37,11 +49,6 @@ func azure functionapp publish my-example-func --publish-local-settings -y
 # ログの確認
 func azure functionapp logstream my-example-func
 ```
-
-## 1.Azure AD (組み込みの認証)
-## 2.Azure SignalR
-## 3.Azure PubSub
-## 4.Azure IoT Hub
 
 # (注意) 不要になったら削除する
 ```
