@@ -1,6 +1,6 @@
 # FunctionsでCI/CD環境を構築してみる
 
-CI/CDツールにはJenkins,CircleCI,AzureDevOps, GitHubActionなど様々なツールがあるが、基本的にはどれでも利用可能。
+CI/CDツールにはJenkins, CircleCI, GitLab, AzureDevOps, GitHubActionなど様々なツールがあるが、基本的にはどれでも利用可能。
 
 ## CI/CD フローの例
 
