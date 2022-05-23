@@ -25,3 +25,7 @@ CI/CDツールにはJenkins,CircleCI,AzureDevOps, GitHubActionなど様々なツ
 
 https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-how-to-github-actions?tabs=dotnet
 
+有効/無効を設定可能  
+GitHubのActionsタブからワークフローを有効/無効にすることができます。デプロイが不要な場合は無効にしておく。  
+`.github/workflowsフォルダ` の名前を`.github/workflows_disable`などと変更して対応しても良い。
+
