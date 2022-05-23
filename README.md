@@ -1,8 +1,10 @@
 # az-func-learn-plus
 
+![Functions](./AzureFunctions.png) 
+
 Azure Functionsは他のAzureサービスと簡単に連携できる仕組みが提供されており、様々なサービスを連携させ簡単に高度なシステムが構築できるように準備されています。
 
-![Functions+Others](./AzureFunctions.png) 
+![Functions+Others](./AzureFunctionsPlus.png)
 
 このリポジトリではFunctionsとAzureのその他のサービスの連携を確認します。
 
