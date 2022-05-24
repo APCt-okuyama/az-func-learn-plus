@@ -12,7 +12,8 @@ Classicモードとワークスペースベースがあります。
 Classicモードで作成
 ```
 az monitor app-insights component create --app my-example-appi --location japaneast --kind web -g az-func-example-rg --application-type web
-az monitor app-insights component show --app my-example-appi -g az-func-example-rg
+az monitor app-insights component show --app my-example-appi -g az-func-example-rg --query "connectionString"
+az monitor app-insights component show --app my-example-appi -g az-func-example-rg --query "instrumentationKey"
 ```
 
 ## Functionsの設定
