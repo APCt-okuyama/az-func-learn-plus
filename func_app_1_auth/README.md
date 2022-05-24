@@ -1,5 +1,6 @@
-# Functionsで組み込みの認証(Azure AD)を利用してみる
+# Functionsで組み込みの認証(Azure AD)を利用してみる 
 
+Easy Authと呼ばれている仕組み。  
 Azure ADによる認証/承認の機能が組み込みの認証として利用可能。  
 Functionsの認証設定から簡単に有効にすることができる。
 
@@ -57,3 +58,8 @@ az ad app show --id
 az ad app create --display-name my-durable-func --reply-urls "https://durable-sample-func.azurewebsites.net/.auth/login/aad/callback" --oauth2-allow-implicit-flow true 
 az ad app delete --id ddf89e1a-ea70-4d46-b1e2-a6847fdb055d
 ```
+
+
+
+Profileの取得
+https://my-example-func.azurewebsites.net/.auth/me

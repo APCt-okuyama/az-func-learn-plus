@@ -18,6 +18,7 @@ Azure Functionsは他のAzureサービスと簡単に連携できる仕組みが
 | 4_iot | Azure IoT Hub | IoT向けサービス MQTT |
 | 5_keyvault | Key Vault | パスワードなどの秘匿情報の取り扱い |
 | 6_cicd | CI/CD | CI/CDについて<br>GitHub Actionの簡単なサンプル |
+| 7_appi | Application Insights | ロギング・モニタリング |
 
 ## Azure functions リソース準備
 Resource Group, Storage,  FunctionsApp
