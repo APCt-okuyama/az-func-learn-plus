@@ -19,6 +19,7 @@ Azure Functionsは他のAzureサービスと簡単に連携できる仕組みが
 | 5_keyvault | Key Vault | パスワードなどの秘匿情報の取り扱い |
 | 6_cicd | CI/CD | CI/CDについて<br>GitHub Actionの簡単なサンプル |
 | 7_appi | Application Insights | ロギング・モニタリング |
+| 8_staticweb | Static Web App | 静的コンテンツの配信サーバーとして利用可能？ |
 
 ## Azure functions リソース準備
 Resource Group, Storage,  FunctionsApp
@@ -30,8 +31,11 @@ az group create -n az-func-example-rg -l japaneast
 az storage account create -n funcstorage0001 -g az-func-example-rg -l japaneast --sku Standard_LRS --kind StorageV2
 az storage account show-connection-string -g az-func-example-rg -n funcstorage0001
 
+# application insights
+az monitor app-insights component create --app my-example-appi --location japaneast --kind web -g az-func-example-rg --application-type web
+
 # functions
-az functionapp create -g az-func-example-rg --consumption-plan-location japaneast --runtime node --runtime-version 14 --functions-version 4 --name my-example-func --storage-account funcstorage0001
+az functionapp create -g az-func-example-rg --consumption-plan-location japaneast --runtime node --runtime-version 14 --functions-version 4 --name my-example-func --storage-account funcstorage0001 --app-insights my-example-appi --app-insights-key <xxxx>
 ```
 
 ※従量課金プランで作成しているので開発中は不用意にスケーリングされないようにScaleLimitを設定しておきます。
