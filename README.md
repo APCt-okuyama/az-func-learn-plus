@@ -43,6 +43,11 @@ az functionapp create -g az-func-example-rg --consumption-plan-location japaneas
 az resource update --resource-type Microsoft.Web/sites -g az-func-example-rg -n my-example-func/config/web --set properties.functionAppScaleLimit=1
 ```
 
+FTPベースのデプロイは利用しない場合無効にしておく
+```
+az webapp config set --name my-example-func --resource-group az-func-example-rg --ftps-state Disabled 
+```
+
 ## Functions Core tools
 良く利用するコマンド
 ```
