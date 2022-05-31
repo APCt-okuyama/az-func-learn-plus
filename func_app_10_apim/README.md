@@ -111,6 +111,17 @@ curl -H "Ocp-Apim-Subscription-Key: xxx" -H "Authorization: Bearer <yyy...yyy>" 
 
 ## ここまでの構成の理解
 
+これは認可コードフローと呼ばれるフロー。
+
 ![OAuth](./OAuth2.0_APIM.png)
 
+1. 認可コードの取得
+2. 認可コードをつかったトークンの取得
+3. トークンをつかってAPIの呼び出し (-H "Authorization: Bearer <yyy...yyy>")
+4. validate-jwtで検証
 
+# 参考
+このサイトの情報がすごくよく纏められている
+https://tech-lab.sios.jp/archives/25470
+
+https://datatracker.ietf.org/doc/html/rfc6749#section-4.1
