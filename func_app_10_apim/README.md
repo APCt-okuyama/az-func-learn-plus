@@ -30,7 +30,14 @@ az apim list --output table
 az apim show --name my-example-apim --resource-group az-func-example-rg --output table
 ```
 
-削除(Purge)　※試してみる
+削除
+```
+az apim delete -n my-example-apim1 -g az-func-example-rg
+```
+
+https://docs.microsoft.com/ja-jp/rest/api/apimanagement/current-ga/deleted-services/purge#code-try-0
+論理削除でない完全な削除(Purge)　※AzureCLIのwebから「使ってみる」ボタンを押して実行することが可能
+※認証情報が必要
 ```
 DELETE https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.ApiManagement/locations/{location}/deletedservices/{serviceName}?api-version=2021-08-01
 ```
